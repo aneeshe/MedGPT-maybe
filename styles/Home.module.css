@@ -96,17 +96,11 @@
   display: flex;
   border-radius: 1vw;
   font-family: "IBM Plex Mono", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #fbfaf3;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-top: 1.1rem;
-  padding-left: 2vw;
-}
-
-.loadingwheel {
-  position: absolute;
-  top: 0.2rem;
-  right: 0.25rem;
+  padding-left: 3.5vw;
 }
 
 .svgicon {
@@ -125,7 +119,10 @@
 .generatebutton:disabled {
   opacity: 0.9;
   cursor: not-allowed;
-  background: none;
+  background: #ffffff;
+  color: #707070;
+  padding-left: -5rem;
+  padding-left: -5rem;
 }
 
 .messagelist {

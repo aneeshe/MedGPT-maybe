@@ -163,9 +163,30 @@ export default function Home() {
                   className={styles.generatebutton}
                 >
                   {loading ? (
-                    <div className={styles.loadingwheel}>
-                      <text style={{ marginTop: "0.5rem" }}>Hmm....</text>
-                      <CircularProgress color="inherit" size={20} />{" "}
+                    <div
+                      style={{ display: "flex", flexDirection: "row" }}
+                      className={styles.loadingwheel}
+                    >
+                      <text
+                        style={{
+                          paddingTop: "0.3vw",
+                          fontSize: "1.60rem",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Hmm....
+                      </text>
+                      <img
+                        style={{
+                          width: "3vw",
+                          height: "3vw",
+                          paddingLeft: "4vw",
+                          paddingBottom: "4vw",
+                        }}
+                        src={
+                          "https://drive.google.com/uc?id=1uGaKV26tHoU_1qh7Gua-UKrbJY_mW3PY"
+                        }
+                      ></img>
                     </div>
                   ) : (
                     // Send icon SVG in input field
@@ -173,21 +194,20 @@ export default function Home() {
                       style={{
                         display: "flex",
                         flexDirection: "row",
-                        gap: "-3vw",
                       }}
                     >
                       <text
-                        style={{ paddingTop: "0.5rem" }}
+                        style={{ paddingTop: "0.4rem" }}
                         className={style.thinktext}
                       >
                         Let's Think
                       </text>
                       <img
                         style={{
-                          width: "3vw",
-                          height: "3vw",
-                          marginLeft: "7vw",
-                          margintop: "5vw",
+                          width: "2.5vw",
+                          height: "2.5vw",
+                          marginLeft: "2vw",
+                          paddingTop: "0.3vw",
                         }}
                         src={
                           "https://drive.google.com/uc?id=18nQlzJDV4UG79M_LWxZzFiWuDeSLgMEa"
