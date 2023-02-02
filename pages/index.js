@@ -119,13 +119,14 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
+      <Head name="newheader">
         <img
           style={{
             width: 150,
             height: 50,
             marginLeft: 20,
             marginTop: 20,
+            backgroundColor: "#fbfaf3",
           }}
           src={logo}
         />
