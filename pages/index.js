@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import CircularProgress from "@mui/material/CircularProgress";
+import dynamic from "next/dynamic";
+
 // import chat from '/api/chatGPT'
 
 export default function Home() {
@@ -14,7 +16,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hi there! How can I help?",
+      message: "Patient presented with the following symptoms",
       type: "apiMessage",
     },
   ]);
@@ -105,24 +107,30 @@ export default function Home() {
     }
   }, [messages]);
 
+  //Sets page
+  /*
+  const Container = dynamic(
+    () => {
+      return import("../components/Container");
+    },
+    { ssr: false }
+  );
+  */
+
   return (
-    <>
+    <div>
       <Head>
-        <img style={{ width: 210, height: 70 }} src={logo} />
-        <meta name="description" content="LangChain documentation chatbot" />
+        <img
+          style={{
+            width: 150,
+            height: 50,
+            marginLeft: 20,
+            marginTop: 20,
+          }}
+          src={logo}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.topnav}>
-        <div className={styles.navlogo}>
-          <h1 href="/"></h1>
-        </div>
-        <div className={styles.navlinks}>
-          <a href="https://github.com/aogara-ds/MedGPT" target="_blank">
-            GitHub
-          </a>
-        </div>
-      </div>
       <main className={styles.main}>
         <div className={styles.cloud}>
           <div ref={messageListRef} className={styles.messagelist}>
@@ -224,6 +232,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
