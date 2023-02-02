@@ -5,6 +5,7 @@ import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import CircularProgress from "@mui/material/CircularProgress";
 import dynamic from "next/dynamic";
+import { style } from "@mui/system";
 
 // import chat from '/api/chatGPT'
 
@@ -118,121 +119,112 @@ export default function Home() {
   */
 
   return (
-    <div>
-      <Head name="newheader">
-        <img
-          style={{
-            width: 150,
-            height: 50,
-            marginLeft: 20,
-            marginTop: 20,
-            backgroundColor: "#fbfaf3",
-          }}
-          src={logo}
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main className={styles.main}>
-        <div className={styles.cloud}>
-          <div ref={messageListRef} className={styles.messagelist}>
-            {messages.map((message, index) => {
-              return (
-                // The latest message sent by the user will be animated while waiting for a response
-                <div
-                  key={index}
-                  className={
-                    message.type === "userMessage" &&
-                    loading &&
-                    index === messages.length - 1
-                      ? styles.usermessagewaiting
-                      : message.type === "apiMessage"
-                      ? styles.apimessage
-                      : styles.usermessage
+    <main style={{ width: "100%" }}>
+      <div style={{ width: "100%" }}>
+        <Head className={styles.newheader}>
+          <img
+            style={{
+              width: "12vw",
+              height: "4vw",
+              marginLeft: 20,
+              marginTop: 20,
+              backgroundColor: "#fbfaf3",
+            }}
+            src={logo}
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+        <main className={styles.main}>
+          <div className={styles.center}>
+            <div className={styles.cloudform}>
+              <form onSubmit={handleSubmit}>
+                <textarea
+                  disabled={loading}
+                  onKeyDown={handleEnter}
+                  ref={textAreaRef}
+                  autoFocus={false}
+                  rows={1}
+                  maxLength={512}
+                  type="text"
+                  id="userInput"
+                  name="userInput"
+                  placeholder={
+                    loading
+                      ? "Waiting for response..."
+                      : "The patient is experiencing..."
                   }
+                  value={userInput}
+                  onChange={(e) => setUserInput(e.target.value)}
+                  className={styles.textarea}
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={styles.generatebutton}
                 >
-                  {/* Display the correct icon depending on the message type */}
-                  {message.type === "apiMessage" ? (
-                    <Image
-                      src="/parroticon.png"
-                      alt="AI"
-                      width="30"
-                      height="30"
-                      className={styles.boticon}
-                      priority={true}
-                    />
+                  {loading ? (
+                    <div className={styles.loadingwheel}>
+                      <text style={{ marginTop: "0.5rem" }}>Hmm....</text>
+                      <CircularProgress color="inherit" size={20} />{" "}
+                    </div>
                   ) : (
-                    <Image
-                      src="/usericon.png"
-                      alt="Me"
-                      width="30"
-                      height="30"
-                      className={styles.usericon}
-                      priority={true}
-                    />
+                    // Send icon SVG in input field
+                    <div>
+                      <text className={style.thinktext}>Let's Think</text>
+                      <img
+                        style={{
+                          width: "3vw",
+                          height: "3vw",
+                          marginLeft: "7vw",
+                          margintop: "-2vw",
+                        }}
+                        src={
+                          "https://drive.google.com/uc?id=18nQlzJDV4UG79M_LWxZzFiWuDeSLgMEa"
+                        }
+                      ></img>
+                    </div>
                   )}
-                  <div className={styles.markdownanswer}>
-                    {/* Messages are being rendered in Markdown format */}
-                    <ReactMarkdown linkTarget={"_blank"}>
-                      {message.message}
-                    </ReactMarkdown>
-                  </div>
-                </div>
-              );
-            })}
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-        <div className={styles.center}>
-          <div className={styles.cloudform}>
-            <form onSubmit={handleSubmit}>
-              <textarea
-                disabled={loading}
-                onKeyDown={handleEnter}
-                ref={textAreaRef}
-                autoFocus={false}
-                rows={1}
-                maxLength={512}
-                type="text"
-                id="userInput"
-                name="userInput"
-                placeholder={
-                  loading ? "Waiting for response..." : "Type your question..."
-                }
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-                className={styles.textarea}
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className={styles.generatebutton}
-              >
-                {loading ? (
-                  <div className={styles.loadingwheel}>
-                    <CircularProgress color="inherit" size={20} />{" "}
-                  </div>
-                ) : (
-                  // Send icon SVG in input field
-                  <svg
-                    viewBox="0 0 20 20"
-                    className={styles.svgicon}
-                    xmlns="http://www.w3.org/2000/svg"
+          <div className={styles.cloud}>
+            <div ref={messageListRef} className={styles.messagelist}>
+              {messages.map((message, index) => {
+                return (
+                  // The latest message sent by the user will be animated while waiting for a response
+                  <div
+                    key={index}
+                    className={
+                      message.type === "userMessage" &&
+                      loading &&
+                      index === messages.length - 1
+                        ? styles.usermessagewaiting
+                        : message.type === "apiMessage"
+                        ? styles.apimessage
+                        : styles.usermessage
+                    }
                   >
-                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
-                  </svg>
-                )}
-              </button>
-            </form>
+                    {/* Display the correct icon depending on the message type */}
+                    <div className={styles.markdownanswer}>
+                      {/* Messages are being rendered in Markdown format */}
+                      <ReactMarkdown linkTarget={"_blank"}>
+                        {message.message}
+                      </ReactMarkdown>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <div className={styles.footer}>
-            <a
-              href="https://langchain.readthedocs.io/en/latest/"
-              target="_blank"
-            >
-              Built on LangChain
-            </a>
-          </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+      <div className={styles.footer}>
+        <h1 className={styles.footertext}>{"(C) CogniMate"}</h1>
+        <h1 className={styles.footertext}>
+          {"Demo Version, Use With Caution"}
+        </h1>
+      </div>
+    </main>
   );
 }
