@@ -17,7 +17,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Patient presented with the following symptoms",
+      message: "",
       type: "apiMessage",
     },
   ]);
