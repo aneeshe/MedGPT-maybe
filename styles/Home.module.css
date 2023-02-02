@@ -15,15 +15,16 @@
 }
 
 .topnav {
-  background-color: #6683b0;
-  border-bottom: 1px solid #30373d;
+  background-color: #fbfaf3;
+  border-bottom: 1px solid #000000;
   display: flex;
   justify-content: space-between;
   padding: 1rem 0.75rem 1rem 0.75rem;
   align-items: center;
 }
 
-.navlogo, .navlinks a {
+.navlogo,
+.navlinks a {
   font-weight: 500;
 }
 
@@ -41,7 +42,7 @@
 
 .apptitle {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   justify-content: center;
 }
@@ -66,9 +67,9 @@
   padding: 1rem 2rem 1rem 2rem;
   width: 75vw;
   border-radius: 0.5rem;
-  border: 1px solid #30373d;
-  background: #070809;
-  color: #ECECF1;
+  border: 1px solid #000000;
+  background: #000000;
+  color: #000000;
   outline: none;
 }
 
@@ -132,12 +133,12 @@
 .usermessage {
   background: #070809;
   padding: 1.5rem;
-  color: #ECECF1;
+  color: #ececf1;
 }
 
-.usermessagewaiting{
+.usermessagewaiting {
   padding: 1.5rem;
-  color: #ECECF1;
+  color: #ececf1;
   background: linear-gradient(to left, #070809, #1a1c20, #070809);
   background-size: 200% 200%;
   background-position: -100% 0;
@@ -158,16 +159,22 @@
 .apimessage {
   background: #141619;
   padding: 1.5rem;
-  color: #ECECF1;
+  color: #ececf1;
   animation: fadein 0.5s;
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.apimessage, .usermessage, .usermessagewaiting {
+.apimessage,
+.usermessage,
+.usermessagewaiting {
   display: flex;
 }
 
@@ -190,19 +197,22 @@
   white-space: pre-wrap !important;
 }
 
-.markdownanswer ol, .markdownanswer ul {
+.markdownanswer ol,
+.markdownanswer ul {
   margin: 1rem;
 }
 
-.boticon, .usericon {
+.boticon,
+.usericon {
   margin-right: 1rem;
   border-radius: 0.1rem;
 }
 
-.markdownanswer h1, .markdownanswer h2, .markdownanswer h3 {
+.markdownanswer h1,
+.markdownanswer h2,
+.markdownanswer h3 {
   font-size: inherit;
 }
-
 
 .center {
   display: flex;
@@ -236,14 +246,14 @@
 }
 
 .footer {
-  color: #5f6368;
+  color: #000000;
   font-size: 0.8rem;
   margin: 1.5rem;
 }
 
 .footer a {
   font-weight: 500;
-  color: #7a7d81;
+  color: #000000;
 }
 
 .footer a:hover {
@@ -252,7 +262,6 @@
 
 /* Mobile optimization */
 @media (max-width: 600px) {
-
   .main {
     padding: 1rem;
     max-height: 90vh;
@@ -271,18 +280,18 @@
     padding: 0.85rem 0.75rem 0.85rem 0.75rem;
   }
 
-.navlogo {
-  font-size: 1.25rem;
-  width: 20rem;
-}
+  .navlogo {
+    font-size: 1.25rem;
+    width: 20rem;
+  }
 
-.markdownanswer code {
-  white-space : pre-wrap !important;
-}
+  .markdownanswer code {
+    white-space: pre-wrap !important;
+  }
 
-.footer {
-  font-size: 0.7rem;
-  width: 100%;
-  text-align: center;
-}
+  .footer {
+    font-size: 0.7rem;
+    width: 100%;
+    text-align: center;
+  }
 }
