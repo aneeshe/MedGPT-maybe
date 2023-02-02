@@ -169,14 +169,25 @@ export default function Home() {
                     </div>
                   ) : (
                     // Send icon SVG in input field
-                    <div>
-                      <text className={style.thinktext}>Let's Think</text>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "-3vw",
+                      }}
+                    >
+                      <text
+                        style={{ paddingTop: "0.5rem" }}
+                        className={style.thinktext}
+                      >
+                        Let's Think
+                      </text>
                       <img
                         style={{
                           width: "3vw",
                           height: "3vw",
                           marginLeft: "7vw",
-                          margintop: "-2vw",
+                          margintop: "5vw",
                         }}
                         src={
                           "https://drive.google.com/uc?id=18nQlzJDV4UG79M_LWxZzFiWuDeSLgMEa"
