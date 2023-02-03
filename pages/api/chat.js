@@ -2,8 +2,13 @@ export default async function (req, res) {
 
   const url = "https://api-inference.huggingface.co/models/stanford-crfm/pubmedgpt";
 
+<<<<<<< HEAD
   const api_token = process.env.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;
   process.env
+=======
+  const api_token = process.env.REACT_APP_API_KEY;
+
+>>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   const response = await fetch(url, {
     method: "POST",
     headers: {"Authorization": `Bearer ${api_token}`},
