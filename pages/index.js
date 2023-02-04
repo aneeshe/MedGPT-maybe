@@ -105,7 +105,7 @@ export default function Home() {
       </Head>
       <div className={styles.topnav}>
       <div className = {styles.navlogo}>
-    <h1 href="/">MedGPT</h1>
+    <h1 href="/">CogniMate</h1>
     </div>
     <div className = {styles.navlinks}> 
     <a href="" target="_blank">Powered by AWS</a>
