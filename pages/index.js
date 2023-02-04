@@ -98,14 +98,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CogniMate</title>
-        <meta name="description" content="LangChain documentation chatbot" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.topnav}>
+      <img
+            style={{
+              width: "12vw",
+              height: "4vw",
+              marginLeft: 20,
+              marginTop: 20,
+              backgroundColor: "#6683B0",
+            }}
+            src={"https://drive.google.com/uc?id=1IGoyc7athVBlqsohJ1-P9WIa_xZ9e0It"}
+          />
       <div className = {styles.navlogo}>
-    <h1 href="/">CogniMate</h1>
     </div>
     <div className = {styles.navlinks}> 
     <a href="" target="_blank">Powered by AWS</a>
