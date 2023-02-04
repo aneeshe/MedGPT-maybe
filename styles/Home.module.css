@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@100..900&display=swap");
 
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 .main {
   display: flex;
   flex-direction: column;
@@ -13,11 +10,7 @@
   padding: 2rem;
 }
 
-<<<<<<< HEAD
-.header {
-=======
 .newheader {
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   width: auto;
 }
 
@@ -26,33 +19,20 @@
 }
 
 .topnav {
-<<<<<<< HEAD
-  background-color: #6683b0;
-  border-bottom: 1px solid #30373d;
-=======
   color: #fbfaf3;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   display: flex;
   justify-content: space-between;
   padding: 1rem 0.75rem 1rem 0.75rem;
   align-items: center;
 }
 
-<<<<<<< HEAD
-.navlogo, .navlinks a {
-=======
 .navlogo,
 .navlinks a {
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   font-weight: 500;
 }
 
 .navlogo {
   font-size: 1.25rem;
-<<<<<<< HEAD
-  margin-left: 1rem;
-=======
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 .navlinks {
@@ -64,11 +44,7 @@
 
 .apptitle {
   font-size: 2.5rem;
-<<<<<<< HEAD
-  font-weight: 500;
-=======
   font-weight: 400;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   display: flex;
   justify-content: center;
 }
@@ -89,16 +65,6 @@
 .textarea {
   position: relative;
   resize: none;
-<<<<<<< HEAD
-  font-size: 1.1rem;
-  padding: 1rem 2rem 1rem 2rem;
-  width: 75vw;
-  border-radius: 0.5rem;
-  border: 1px solid #30373d;
-  background: #070809;
-  color: #ECECF1;
-  outline: none;
-=======
   font-size: 1.5rem;
   padding: 2rem 2rem 1rem 2rem;
   height: 25vw;
@@ -109,7 +75,6 @@
   color: #000000;
   outline: none;
   box-shadow: 0px 8px 2px #707070;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 .textarea:disabled {
@@ -121,22 +86,6 @@
 }
 
 .generatebutton {
-<<<<<<< HEAD
-  position: absolute;
-  top: 0.87rem;
-  right: 1rem;
-  color: rgb(230, 109, 109);
-  background: none;
-  padding: 0.3rem;
-  border: none;
-  display: flex;
-}
-
-.loadingwheel {
-  position: absolute;
-  top: 0.2rem;
-  right: 0.25rem;
-=======
   position: relative;
   bottom: 8.5vw;
   left: 54vw;
@@ -152,7 +101,6 @@
   font-size: 1.5rem;
   padding-top: 1.1rem;
   padding-left: 3.5vw;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 .svgicon {
@@ -164,25 +112,17 @@
 
 .generatebutton:hover {
   background: #3f68af;
-<<<<<<< HEAD
-  border-radius: 0.2rem;
-=======
   border-radius: 1vw;
   transition: 0.08s;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 .generatebutton:disabled {
   opacity: 0.9;
   cursor: not-allowed;
-<<<<<<< HEAD
-  background: none;
-=======
   background: #ffffff;
   color: #707070;
   padding-left: -5rem;
   padding-left: -5rem;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 .messagelist {
@@ -190,12 +130,9 @@
   height: 100%;
   overflow-y: scroll;
   border-radius: 0.5rem;
-<<<<<<< HEAD
-=======
   color: "#000000";
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 300;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 .messagelistloading {
@@ -206,17 +143,6 @@
 }
 
 .usermessage {
-<<<<<<< HEAD
-  background: #070809;
-  padding: 1.5rem;
-  color: #ECECF1;
-}
-
-.usermessagewaiting{
-  padding: 1.5rem;
-  color: #ECECF1;
-  background: linear-gradient(to left, #070809, #1a1c20, #070809);
-=======
   background: #ffffff;
   padding: 1.5rem;
   color: #ececf1;
@@ -233,7 +159,6 @@
   padding: 1.5rem;
   color: #ececf1;
   background: #ffffff;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   background-size: 200% 200%;
   background-position: -100% 0;
   animation: loading-gradient 2s ease-in-out infinite;
@@ -251,26 +176,13 @@
 }
 
 .apimessage {
-<<<<<<< HEAD
-  background: #141619;
-  padding: 1.5rem;
-  color: #ECECF1;
-=======
   background: #ffffff;
   padding: 1.5rem;
   color: #000000;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   animation: fadein 0.5s;
 }
 
 @keyframes fadein {
-<<<<<<< HEAD
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.apimessage, .usermessage, .usermessagewaiting {
-=======
   from {
     opacity: 0;
   }
@@ -282,7 +194,6 @@
 .apimessage,
 .usermessage,
 .usermessagewaiting {
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   display: flex;
 }
 
@@ -305,22 +216,6 @@
   white-space: pre-wrap !important;
 }
 
-<<<<<<< HEAD
-.markdownanswer ol, .markdownanswer ul {
-  margin: 1rem;
-}
-
-.boticon, .usericon {
-  margin-right: 1rem;
-  border-radius: 0.1rem;
-}
-
-.markdownanswer h1, .markdownanswer h2, .markdownanswer h3 {
-  font-size: inherit;
-}
-
-
-=======
 .markdownanswer ol,
 .markdownanswer ul {
   margin: 1rem;
@@ -337,7 +232,6 @@
   font-size: inherit;
 }
 
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 .center {
   display: flex;
   justify-content: center;
@@ -348,15 +242,9 @@
 }
 
 .cloud {
-<<<<<<< HEAD
-  width: 75vw;
-  height: 65vh;
-  background: #070809;
-=======
   width: 80vw;
   height: 60vh;
   background: #ffffff;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   border-radius: 0.5rem;
   border: 1px solid #30373d;
   display: flex;
@@ -375,21 +263,6 @@
   opacity: 0.25;
 }
 
-<<<<<<< HEAD
-.footer {
-  color: #5f6368;
-  font-size: 0.8rem;
-  margin: 1.5rem;
-}
-
-.footer a {
-  font-weight: 500;
-  color: #7a7d81;
-}
-
-.footer a:hover {
-  opacity: 0.8;
-=======
 .footertext {
   font-size: 1rem;
   color: #ffffff;
@@ -407,15 +280,10 @@
   margin-left: -0.5rem;
   padding-left: 1rem;
   margin-bottom: -1rem;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
 }
 
 /* Mobile optimization */
 @media (max-width: 600px) {
-<<<<<<< HEAD
-
-=======
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
   .main {
     padding: 1rem;
     max-height: 90vh;
@@ -429,32 +297,11 @@
     width: 22rem;
   }
   .topnav {
-<<<<<<< HEAD
-    border: 1px solid black;
-=======
     border: 0px solid black;
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
     align-items: center;
     padding: 0.85rem 0.75rem 0.85rem 0.75rem;
   }
 
-<<<<<<< HEAD
-.navlogo {
-  font-size: 1.25rem;
-  width: 20rem;
-}
-
-.markdownanswer code {
-  white-space : pre-wrap !important;
-}
-
-.footer {
-  font-size: 0.7rem;
-  width: 100%;
-  text-align: center;
-}
-}
-=======
   .navlogo {
     font-size: 1.25rem;
     width: 20rem;
@@ -464,4 +311,3 @@
     white-space: pre-wrap !important;
   }
 }
->>>>>>> 9dc2109be40aa5df76503cb4ffa1ad20a8799945
